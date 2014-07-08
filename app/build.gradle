@@ -1,0 +1,28 @@
+apply plugin: 'java'
+//apply plugin: 'war'
+apply plugin: 'maven'
+
+group = 'org.svenehrke.moduleapp.app'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+     mavenCentral()
+     mavenLocal()
+}
+
+dependencies {
+//	if (lib1_dependency_mode == 'binary') {
+//		compile 'org.svenehrke.moduleapp.lib1:lib1:0.0.1-SNAPSHOT'
+//	}
+//	else {
+//		compile project('../lib1')
+//	}
+	compile ( (lib1_dependency_mode == 'binary') ? 'org.svenehrke.moduleapp.lib1:lib1:0.0.1-SNAPSHOT' : project('../lib1') )
+	testCompile 'junit:junit:4.11'
+}
+task ttt {
+
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

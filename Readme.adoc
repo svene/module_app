@@ -1,0 +1,4 @@
+== Use gradle to switch a dependency from binary to source mode and back
+
+see http://www.sven-ehrke.de/asciidocblog/switch_dependencies_binary_source.html
+
